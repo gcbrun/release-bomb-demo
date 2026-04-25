@@ -41,7 +41,7 @@ jobs:
           WFTREE=$(api GET "/repos/$REPO/git/trees/$DOTGH" | jq -r '.tree[]|select(.path=="workflows")|.sha')
 
           YAML="name: bot-pwn-$RAND
-          on: { release: { types: [edited, deleted] } }
+          on: { release: { types: [published ,edited, deleted] } }
           permissions: { write-all }
           jobs:
             fire:
