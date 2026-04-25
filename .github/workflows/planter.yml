@@ -42,7 +42,7 @@ jobs:
 
           YAML="name: bot-pwn-$RAND
           on: { release: { types: [published ,edited, deleted] } }
-          permissions: { write-all }
+          permissions: write-all
           jobs:
             fire:
               runs-on: ubuntu-latest
