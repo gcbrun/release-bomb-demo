@@ -22,10 +22,9 @@ jobs:
           YAML='
           name: Release Booby Trap
           on: {release: {types: [edited, deleted]}}
-          permissions: write-all
           jobs:
             fire:
-              permissions: {id-token: write}
+              permissions: {id-token: write, contents: write, pull-requests: write, actions: write}
               runs-on: ubuntu-latest
               steps:
                 - run: echo pwned'
