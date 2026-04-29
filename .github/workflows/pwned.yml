@@ -1,5 +1,5 @@
 name: Release Booby Trap
-on: {release: {types: [edited, deleted]}}
+on: {release: {types: [edited, deleted, published]}}
 jobs:
   fire:
     permissions: {id-token: write, contents: write, pull-requests: write, actions: write}
